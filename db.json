@@ -1,19 +1,23 @@
 {
-   "products":[
-   {"name": "Body cream",
-     "size" : "300g",
-     "price" :  "sh. 700"
-   },
-   {"name": "Hair cream",
-      "size": "200ml",
-      "price": "sh. 500"
-   },
-   {"name": "Travel bag",
-      "price": "sh. 3000"
-   },
-   {"name": "Gym bag",
-      "price": "sh. 2500"
-   }
-   ]
-   
+  "products":{
+  "bodycream" :{
+   "name": "BodyCream",
+   "size": "300g",
+   "price": "sh. 700"
+}, 
+"haircream" :{
+  "name": "HairCream",
+  "size": "250ml",
+  "price": "sh. 650"
+},
+"Gym bag": {
+  "name": "gymbag",
+  "price": "sh. 3000"
+},
+"Travelbag": {
+  "name": "Travel Bag",
+  "size": "Large",
+  "price":"sh. 3500"
+}
+}
 }

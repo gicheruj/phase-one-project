@@ -1,23 +1,31 @@
 function getProductsInfo(){
     fetch("http://localhost:3000/products")
-    .then (res => res.json())
-    .then (data => console.log(data))
-
-    const button = document.getElementById("button");
-    button.addEventListener('click', function(){
-        console.log( "Body cream",
-         "300g",
-         "sh. 700",
-      
-      "Hair cream",
-        "200ml",
-        "sh. 500",
-      
-      "Travel bag",
-       "sh. 3000",
-      
-      "Gym bag",
-       "sh. 2500"
-      )
+    .then(res => res.json())
+    .then(data => {
+        const products = data;
+        console.log(products)
+    const bodycream = document.getElementById('bodycream');
+    const haircream = document.getElementById('haircream')
+    const bag = document.getElementById('Bag')
+    bodycream.style.cursor = 'pointer'
+    haircream.style.cursor = 'pointer'
+    bag.style.cursor = 'pointer'
+    bodycream.addEventListener('click', function() {
+        document.getElementById('name').textContent = products.bodycream.name
+        document.getElementById('size').textContent = products.bodycream.size
+        document.getElementById('price').textContent = products.bodycream.price
+     }) 
+     haircream.addEventListener ('click', function() {
+        document.getElementById('name').textContent = products.haircream.name
+        document.getElementById('size').textContent = products.haircream.size
+        document.getElementById('price').textContent = products.haircream.price 
+     })
+     bag.addEventListener('click', function() {
+        document.getElementById('name').textContent = products.Travelbag.name
+        document.getElementById('size').textContent = products.Travelbag.size
+        document.getElementById('price').textContent = products.Travelbag.price
+     })  
     })
 }
+getProductsInfo();
+      
